@@ -12,4 +12,13 @@ layout: default
     {{ content }}
   </article>
 
+  <br>
+  <footer class="meta">
+    <ul class="article-tag-list">
+      {% for tag in page.tags %}
+        <li class="article-tag">{{ tag }}</li>
+      {% endfor %}
+    </ul>
+  </footer>
+
 </div>

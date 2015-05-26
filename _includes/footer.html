@@ -1,11 +1,4 @@
-<nav id="footer">
-  <ul id="footer-links">
-    {% for page in site.pages %}
-      {% if page.title %}
-        <li>
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</nav>
+<footer id="footer">
+  <p><small class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></small></p>
+
+</footer>

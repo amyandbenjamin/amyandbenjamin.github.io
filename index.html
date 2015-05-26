@@ -6,17 +6,27 @@ layout: default
 
   <ul class="abstract-list">
     {% for post in site.posts %}
-      <li>
+      <li class="abstract-list-item">
         <div class="meta">
-          <h2 class="article-title">
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-          <span class="article-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <h2 class="article-title">{{ post.title }}</h2>
+            <span class="article-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          </a>
+          {% if post.description %}
+            <p class="article-description">{{ post.description | strip_html | strip_newlines }}</p>
+          {% endif %}
+          {% if post.tags %}
+            <div class="meta">
+              <ul class="article-tag-list">
+                {% for tag in post.tags %}
+                  <li class="article-tag">{{ tag }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
         </div>
       </li>
     {% endfor %}
   </ul>
-
-  <p><small class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></small></p>
 
 </div>

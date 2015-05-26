@@ -2,12 +2,29 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
+$primary: #F36A62
+$primary-dark: #C43F37
+$primary-light: #F38D87
+$light-grey: #a9a9a9 
+$blue: #6495ed
+
+*
+  max-width: 100%
+ 
+$primary: #F36A62
+$primary-dark: #C43F37
+$primary-light: #F38D87
+
 *
   max-width: 100%
 
 html
   font-size: 100%
   font-family: 'Open Sans', 'Droid Sans', 'Source Sans Pro', 'Helvetica Neue', Verdana, Tahoma, Arial, sans-serif
+
+h1,h2,h3,h4,h5,h6
+  margin: 0
+  padding: 0
 
 ol
   padding-left: 1.5rem
@@ -18,10 +35,12 @@ ul
 
 a
   text-decoration: none
-  color: #000
+  color: $primary
   transition: color 0.2s ease-in 0s
   &:hover
-    color: #6495ed
+    color: $primary-dark
+  &:visited
+    color: $primary-light
 
 blockquote
   display: flex
@@ -42,28 +61,55 @@ blockquote
 
 #container
   margin: auto
-  width: 60%
+  width: 80%
+  max-width: 650px
   min-width: 18rem
 
 .site-title, .site-subtitle
   display: inline-block
   vertical-align: middle
 .site-title
-  font-size: 3rem
+  font-size: 2.5em
   font-weight: lighter
-  margin-right: 1.5rem
+  margin: 20px 0 10px 0 
+  background-color: $primary
+  padding: 5px 23px
+  a
+    color: white
+    &:hover
+      color: $primary-light
 .site-subtitle
-  padding-left: 1.5rem
-  font-size: small
+  font-weight: lighter
+  font-size: 1em
+  margin: 0 0 20px 0
+  color: $primary-light
 
 #content
-  text-autospace: ideograph-alpha
   .meta
     .article-title
-      font-weight: lighter
+      font-weight: normal
       margin-bottom: 0
+      color: $primary
     .article-date
-      color: #a9a9a9
+      font-weight: lighter
+      color: $light-grey
+      margin: 0
+    .article-tag-list
+      cursor: default
+      margin: 0
+      padding: 0
+      font-size: 80%
+      list-style-type: none
+      .article-tag
+        font-weight: lighter
+        background-color: $light-grey
+        color: white
+        padding: 3px 8px
+        list-style-type: none
+        display: inline-block
+    .article-description
+      font-weight: lighter
+
   .extra
     float: right
     padding-left: 0.5rem
@@ -72,10 +118,13 @@ blockquote
     padding: 0
     margin: 0
     color: #696969
+  .abstract-list-item
+    margin-bottom: 50px
   #more
     display: none
   .article-content
     padding-top: 0.5rem
+    font-weight: lighter
     h2
       font-weight: lighter
       font-size: 1.3rem
@@ -90,8 +139,6 @@ blockquote
         color: #6495ed
       img
         margin-left: -0.3rem
-    p
-      font-weight: normal
   figure.highlight
     margin-right: 0
     margin-left: 0
@@ -105,20 +152,21 @@ blockquote
       max-width: 40%
       float: right
 
-#footer-links
-  clear: right
+ul#main-nav
   list-style-type: none
-  padding-top: 3rem
-  float: right
-  ul
-    list-style-type: none
-    float: right
+  width: 100%
+  margin: 0 0 50px 0
+  padding: 0
   li
-    float: left
+    display: inline-block
     margin-left: 1rem
+    &:first-child
+      margin-left: 0
   a
     display: inline-block
-  .zh
-    word-break-cjk: break-word
-    width: 1rem
-    letter-spacing: 1rem
+
+#footer
+  width: 100%
+  margin-top: 50px
+  .rss-subscribe
+    float: right
