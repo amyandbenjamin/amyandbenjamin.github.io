@@ -1,0 +1,124 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+*
+  max-width: 100%
+
+html
+  font-size: 100%
+  font-family: 'Open Sans', 'Droid Sans', 'Source Sans Pro', 'Helvetica Neue', Verdana, Tahoma, Arial, sans-serif
+
+ol
+  padding-left: 1.5rem
+  list-style-type: lower-greek
+
+ul
+  list-style-type: none
+
+a
+  text-decoration: none
+  color: #000
+  transition: color 0.2s ease-in 0s
+  &:hover
+    color: #6495ed
+
+blockquote
+  display: flex
+  p
+    margin-left: auto
+
+.highlight
+  background: #2d2d2d
+  border-style: solid
+  border-width: 1px 0
+  overflow: auto
+  color: #ccc
+  padding: 0.5rem
+  vertical-align: baseline
+  /*line-height font-size * line-height
+  .gutter pre
+    color: #666
+
+#container
+  margin: auto
+  width: 60%
+  min-width: 18rem
+
+.site-title, .site-subtitle
+  display: inline-block
+  vertical-align: middle
+.site-title
+  font-size: 3rem
+  font-weight: lighter
+  margin-right: 1.5rem
+.site-subtitle
+  padding-left: 1.5rem
+  font-size: small
+
+#content
+  text-autospace: ideograph-alpha
+  .meta
+    .article-title
+      font-weight: lighter
+      margin-bottom: 0
+    .article-date
+      color: #a9a9a9
+  .extra
+    float: right
+    padding-left: 0.5rem
+    display: none
+  .abstract-list, .excerpt, .archive-list
+    padding: 0
+    margin: 0
+    color: #696969
+  #more
+    display: none
+  .article-content
+    padding-top: 0.5rem
+    h2
+      font-weight: lighter
+      font-size: 1.3rem
+    h3
+      font-weight: lighter
+      font-size: 1.15rem
+    a
+      padding-left: 0.3rem
+      padding-right: 0.3rem
+      color: #495a80
+      &:hover
+        color: #6495ed
+      img
+        margin-left: -0.3rem
+    p
+      font-weight: normal
+  figure.highlight
+    margin-right: 0
+    margin-left: 0
+  nav
+    clear: both
+    text-align: center
+    #left-navigator
+      max-width: 40%
+      float: left
+    #right-navigator
+      max-width: 40%
+      float: right
+
+#footer-links
+  clear: right
+  list-style-type: none
+  padding-top: 3rem
+  float: right
+  ul
+    list-style-type: none
+    float: right
+  li
+    float: left
+    margin-left: 1rem
+  a
+    display: inline-block
+  .zh
+    word-break-cjk: break-word
+    width: 1rem
+    letter-spacing: 1rem

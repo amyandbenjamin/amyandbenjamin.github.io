@@ -1,0 +1,8 @@
+# Site settings
+title: Amy And Benjamin 
+email: helloamywilliams@gmail.com  
+description: 
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://amyandbenjamin.co.uk"
+twitter_username: benjaminjosephw 
+markdown: kramdown
